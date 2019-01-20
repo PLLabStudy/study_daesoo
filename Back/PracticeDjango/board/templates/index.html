@@ -1,0 +1,6 @@
+<a type="button" href="/create">게시글 생성</a>
+<br />
+{% for board in boards %}
+<h3>board title is : {{board.title}}</h3>
+board name is : {{board.content}}
+{% endfor %}
