@@ -1,0 +1,11 @@
+게시글을 생성하자
+
+<form action="{% url 'board:create' %}" method="POST">
+    {% csrf_token %}
+    제목 <input type="text" name="title"><br>
+    내용 <textarea rows="4" cols="50" name="content">
+        insert your content
+    </textarea>
+
+    <input type="submit" value="Submit">
+</form>
