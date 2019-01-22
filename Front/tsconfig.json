@@ -1,21 +1,28 @@
 {
   "compilerOptions": {
-    "outDir": "./built/",
+    "outDir": "dist",
     "sourceMap": true,
     "strict": true,
     "noImplicitReturns": true,
-    "module": "es2015",
+    "module": "commonjs", // 모듈 설정 TODO: 무슨 차이?
     "moduleResolution": "node",
     "target": "es5",
-    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "allowJs": true,
     "esModuleInterop": true,
     "noImplicitAny": true, // any타입 금지
+    "removeComments": true,
     "strictPropertyInitialization": false, // 우선 다른대랑 ts 버전이 달라서 임시로 false로 처리한다. 요소마다 !를 붙여주면 되지만 ts 버전이 다름
+    "lib": [
+      "es6",
+      "dom"
+    ] // 컴파일에 포함될 라이브러리 파일 목록 (target 옵션 값에 따라 기본으로 포함되는 라이브러리가 있다. lib 옵션 설정시 그 라이브러리 파일만 포함된다.)
   },
   "include": [
     "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
