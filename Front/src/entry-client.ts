@@ -1,7 +1,21 @@
-import { createApp } from './app';
+import Vue from 'vue';
+import { createApp } from './App';
 
-// client-specific bootstrapping logic...
-const { app } = createApp();
+const { app, router } = createApp();
 
-// this assumes App.vue template root element has `id="app"`
-app.$mount('#app');
+router.onReady(() => {
+    router.beforeResolve((to, from, next) => {
+        const matched = router.getMatchedComponents(to);
+
+        if (!matched.length) {
+            return next();
+        }
+
+        Promise.all(matched.map((component: any) => {
+        })).then(() => {
+            next();
+        }).catch(next);
+    });
+
+    app.$mount('#app');
+});
