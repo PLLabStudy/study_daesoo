@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const VueSSRServerPlugin = require('vue-server-renderer/server-plugin');
 
@@ -13,6 +12,7 @@ module.exports = {
     },
     plugins: [
         // make sure to include the plugin!
+        // VueLoader 버전업으로 플로그인 명시적으로 추가하지 않으면 에러남.
         new VueSSRServerPlugin(),
         new VueLoaderPlugin()
     ],

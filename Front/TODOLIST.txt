@@ -1,0 +1,8 @@
+1. bundle analyzer
+2. 국제화 vue-i18n
+3. compression ( gzipping )
+4. vuex
+5. lazy-load
+6. css
+7. preload
+8. code splitting ( node module -> vendor로 뺀다. )
