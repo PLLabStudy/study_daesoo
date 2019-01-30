@@ -4,7 +4,7 @@
     "sourceMap": true,
     "strict": true,
     "noImplicitReturns": true,
-    "module": "commonjs", // 모듈 설정 TODO: 무슨 차이?
+    "module": "esnext", // 모듈 설정 TODO: commonjs 로 할 시 dynamic import를 인식하지 못하고 변환이 이루어 진다. 따라서 esnext로 변환 후 babel로 다시 변환해야할 것.
     "moduleResolution": "node",
     "target": "es5",
     "experimentalDecorators": true,

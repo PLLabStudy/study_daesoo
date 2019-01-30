@@ -7,7 +7,7 @@ export function createRouter() {
     return new VueRouter({
         mode: 'history',
         routes: [
-            { path: '/', name: 'home', components: { options: { template: '<div> Hello Main Page?</div>' } } },
+            { path: '/', name: 'home', component: () => import('../components/Main.vue') },
             { path: '/sub', name: 'sub', component: () => import('../components/Sub.vue') }
         ]
     });
